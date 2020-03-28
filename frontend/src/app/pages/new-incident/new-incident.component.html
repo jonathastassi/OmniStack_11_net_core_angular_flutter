@@ -1,0 +1,22 @@
+<div class="new-incident-container">
+    <div class="content">
+        <section>
+            <img src="/assets/images/logo.svg" alt="Be The Hero">
+
+            <h1>Cadastrar novo caso</h1>
+            <p>Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p>
+
+            <a routerLink="/profile" class="back-link">
+                <i class="fas fa-arrow-left"></i> Voltar para o home
+            </a>
+        </section>
+
+        <form [formGroup]="form">
+            <input type="text" placeholder="Título do caso" formControlName="title">
+            <textarea placeholder="Descrição" formControlName="description"></textarea>
+            <input type="number" placeholder="Valor em reais" formControlName="value">
+
+            <button type="submit" class="button" (click)="handleSave()">Cadastrar</button>
+        </form>
+    </div>
+</div>
