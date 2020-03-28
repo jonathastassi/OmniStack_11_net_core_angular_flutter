@@ -1,0 +1,18 @@
+<div class="logon-container">
+    <section class="form">
+        <img src="/assets/images/logo.svg" alt="Be The Hero">
+
+        <form [formGroup]="form">
+            <h1>Faça seu logon</h1>
+
+            <input text="text" placeholder="Sua ID" formControlName="id">
+            <button type="submit" class="button" (click)="handleLogon()">Entrar</button>
+
+            <a routerLink="/register" class="back-link">
+                <i class="fas fa-sign-in-alt"></i> Não tenho cadastro
+            </a>
+        </form>
+    </section>
+
+    <img src="/assets/images/heroes.png" alt="Heroes" srcset="">
+</div>
