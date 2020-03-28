@@ -1,0 +1,27 @@
+<div class="register-container">
+    <div class="content">
+        <section>
+            <img src="/assets/images/logo.svg" alt="Be The Hero">
+
+            <h1>Cadastro</h1>
+            <p>Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
+
+            <a routerLink="/" class="back-link">
+                <i class="fas fa-arrow-left"></i> Voltar para o logon
+            </a>
+        </section>
+
+        <form [formGroup]="form">
+            <input type="text" placeholder="Nome da ONG" formControlName="name">
+            <input type="email" placeholder="E-mail" formControlName="email">
+            <input type="text" placeholder="WhatsApp" formControlName="whatsapp">
+
+            <div class="input-group">
+                <input type="text" placeholder="Cidade" formControlName="city">
+                <input type="text" placeholder="UF" formControlName="uf" style="width: 80px;">
+            </div>
+
+            <button type="submit" class="button" [disabled]="form.invalid" (click)="handleRegister()">Cadastrar</button>
+        </form>
+    </div>
+</div>
