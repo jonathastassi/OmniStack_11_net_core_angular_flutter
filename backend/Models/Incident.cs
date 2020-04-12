@@ -1,20 +1,35 @@
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+
+using Newtonsoft.Json;
 
 namespace backend.Models
 {
-    public class Incident
+    public class Incident : Entity
     {
-        public int Id { get; set; }
-        [Required]
-        [Column(TypeName = "varchar(100)")]
-        public string Title { get; set; }
-        [Required]
-        public string Description { get; set; }
-        [Required]
-        public decimal Value { get; set; }
 
-        public string OngId { get; set; }
-        public Ong Ong { get; set; }
+        [JsonConstructor]
+        public Incident(string title, string description, decimal value, string ongId)
+        {
+            Title = title;
+            Description = description;
+            Value = value;
+            OngId = ongId;
+        }
+
+        public Incident(int id)
+        {
+            Id = id;
+        }
+
+        public int Id { get; private set; }
+        public string Title { get; private set; }
+        public string Description { get; private set; }
+        public decimal Value { get; private set; }
+        public string OngId { get; private set; }
+        public Ong Ong { get; private set; }
+
+        public void SetOngAuthenticated(string ongId)
+        {
+            this.OngId = ongId;
+        }
     }
 }
