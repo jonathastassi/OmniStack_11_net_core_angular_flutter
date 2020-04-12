@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Backend.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Backend.Api.Controllers.v1.AuthController.Login(Backend.Api.Dtos.OngLogin)">
+            <summary>
+            Rota para autenticar na API e gerar o token JWT.
+            </summary>
+        </member>
+        <member name="M:Backend.Api.Controllers.v1.AuthController.Register(Backend.Api.Models.Ong)">
+            <summary>
+            Rota para registrar uma nova ONG na API.
+            </summary>
+        </member>
+        <member name="M:Backend.Api.Controllers.v1.IncidentsController.GetAll(System.Int32)">
+            <summary>
+            Rota que retorna as ações cadastradas na API
+            </summary>
+        </member>
+        <member name="M:Backend.Api.Controllers.v1.IncidentsController.Post(Backend.Api.Models.Incident)">
+            <summary>
+            Rota que cadastrada ações na API
+            </summary>
+        </member>
+        <member name="M:Backend.Api.Controllers.v1.IncidentsController.Delete(System.Int32)">
+            <summary>
+            Rota que deleta ações na API
+            </summary>
+        </member>
+        <member name="M:Backend.Api.Controllers.v1.OngsController.GetAll">
+            <summary>
+            Rota que retorna as ongs cadastradas na API.
+            </summary>
+        </member>
+        <member name="M:Backend.Api.Controllers.v1.ProfileController.GetIncidents">
+            <summary>
+            Rota que retorna as açaões cadastradas pelo usuário autenticado.
+            </summary>
+        </member>
+    </members>
+</doc>
